@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio nhóm sinh viên - giới thiệu thành viên, dự án và lựa chọn công nghệ."
+    />
+    <title>BLOXKIDS Team | Group Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scroll-progress-bar"></span>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Điều hướng chính">
+        <a class="brand" href="#home" aria-label="BLOXKIDS Team - Trang chủ">
+          <span class="brand-mark">B</span>
+          <span>BLOCK<span class="brand-accent">KIDS</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#members">Members</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="home">
+        <div class="hero-grid-pattern" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">GROUP PORTFOLIO / 2026</p>
+          <h1>BLOXKIDS<br /><span>TEAM.</span></h1>
+          <p class="hero-slogan">Build. Learn. Create Together.</p>
+          <p class="hero-description">
+            Một nhóm sinh viên CNTT cùng biến ý tưởng thành những sản phẩm số rõ ràng,
+            hữu ích và sẵn sàng học hỏi mỗi ngày.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#members">Meet the Team <span>→</span></a>
+            <a class="button button-secondary" href="#projects">Our Projects</a>
+          </div>
+        </div>
+        <div class="hero-blocks" aria-hidden="true">
+          <img class="block block-red" src="images/roblox1.jpg" alt="" />
+          <img class="block block-white" src="images/roblox2.jpg" alt="" />
+          <img class="block block-dark" src="images/roblox3.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="section section-light" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">01 / ABOUT THE TEAM</p>
+            <h2>Chúng tôi học bằng cách <span>cùng tạo ra sản phẩm.</span></h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-intro card reveal">
+              <span class="number-label">WHO WE ARE</span>
+              <p>
+                BLOXKIDS Team là nhóm sinh viên với mục tiêu xây dựng nền tảng web vững chắc,
+                rèn tư duy sản phẩm và chia sẻ kiến thức trong từng sprint nhỏ.
+              </p>
+              <div class="mini-stat-row">
+                <div><strong>03</strong><span>thành viên</span></div>
+                <div><strong>01</strong><span>dự án</span></div>
+              </div>
+            </article>
+
+            <div class="about-points">
+              <article class="about-point reveal">
+                <span class="point-icon">01</span>
+                <div>
+                  <h3>Mục tiêu</h3>
+                  <p>Hoàn thành sản phẩm có trải nghiệm tốt, đúng tiến độ và dễ bảo trì.</p>
+                </div>
+              </article>
+              <article class="about-point reveal">
+                <span class="point-icon">02</span>
+                <div>
+                  <h3>Quan tâm</h3>
+                  <p>Web development, UI/UX, teamwork và các sản phẩm hỗ trợ sinh viên.</p>
+                </div>
+              </article>
+              <article class="about-point reveal">
+                <span class="point-icon">03</span>
+                <div>
+                  <h3>Cách phối hợp</h3>
+                  <p>Phân chia rõ vai trò, cập nhật ngắn thường xuyên và review lẫn nhau.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MEMBERS ===== -->
+      <section class="section section-dark" id="members">
+        <div class="container">
+          <div class="section-heading section-heading-light reveal">
+            <p class="eyebrow">02 / OUR CREW</p>
+            <h2>Những người đứng sau <span>BLOXKIDS Team.</span></h2>
+            <p class="heading-description">Chọn một thành viên để xem hồ sơ và đóng góp chi tiết.</p>
+          </div>
+
+          <div class="members-grid" id="members-grid" aria-live="polite">
+            <!-- Member cards are rendered from script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="section section-light" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">03 / SELECTED WORK</p>
+            <h2>Dự án nhóm <span>đang xây dựng.</span></h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card card reveal">
+              <div class="project-topline">
+                <span class="project-index">01</span>
+                <span class="status status-progress">In Progress</span>
+              </div>
+              <h3>Team Portfolio Website</h3>
+              <p>
+                Website portfolio giới thiệu nhóm, thông tin các thành viên, kỹ năng, vai trò,
+                dự án và các quyết định công nghệ được sử dụng trong quá trình phát triển.
+              </p>
+              <ul class="tech-tags" aria-label="Công nghệ sử dụng">
+                <li>HTML5</li><li>CSS3</li><li>Vanilla JavaScript</li>
+              </ul>
+              <a class="project-button" href="#contact">View Project <span>↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TECHNOLOGY ===== -->
+      <section class="section technology-section" id="technology" hidden>
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">04 / TECHNOLOGY CHOICES</p>
+            <h2>Chọn công nghệ phù hợp <span>với bài toán.</span></h2>
+            <p class="heading-description">
+              Với portfolio nhóm quy mô nhỏ, nhóm ưu tiên công nghệ nhẹ, dễ đọc và có thể chạy ngay trên trình duyệt.
+            </p>
+          </div>
+
+          <div class="stack-overview card reveal" aria-label="Tech Stack của dự án">
+            <div class="stack-overview-title">
+              <p class="card-kicker">TECH STACK</p>
+              <h3>Static web, zero setup.</h3>
+            </div>
+            <ul class="stack-list">
+              <li><span class="stack-icon stack-html">H</span><strong>HTML5</strong><small>Cấu trúc nội dung</small></li>
+              <li><span class="stack-icon stack-css">C</span><strong>CSS3</strong><small>Giao diện &amp; responsive</small></li>
+              <li><span class="stack-icon stack-js">JS</span><strong>Vanilla JavaScript</strong><small>Tương tác &amp; profile modal</small></li>
+            </ul>
+            <p class="stack-note">Không framework · Không build step · Không dependency bắt buộc</p>
+          </div>
+
+          <div class="technology-grid">
+            <article class="tech-card tech-card-main card reveal">
+              <div class="tech-card-header">
+                <span class="tech-icon">&lt;/&gt;</span>
+                <div>
+                  <p class="card-kicker">QUYẾT ĐỊNH HIỆN TẠI</p>
+                  <h3>Vì sao chọn HTML, CSS, JS thuần?</h3>
+                </div>
+              </div>
+              <p>HTML, CSS và Vanilla JavaScript là lựa chọn phù hợp cho website portfolio nhóm này.</p>
+              <div class="pros-cons">
+                <div>
+                  <h4>Nhẹ và nhanh</h4>
+                  <ul>
+                    <li>Portfolio nhóm có quy mô nhỏ nên công nghệ thuần là đủ, nhẹ và dễ host.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Không cần cài đặt hay build</h4>
+                  <ul>
+                    <li>Mở file bằng trình duyệt là chạy, không cần môi trường phát triển phức tạp.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Phù hợp với đề bài</h4>
+                  <ul>
+                    <li>HTML + CSS + JavaScript đáp ứng đầy đủ yêu cầu giao diện, nội dung và tương tác cơ bản.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="technology-limitations">
+                <h4>Hạn chế cần lưu ý</h4>
+                <ul>
+                  <li>Khi dự án lớn hơn, JavaScript thuần sẽ khó quản lý state và luồng xử lý.</li>
+                  <li>Component không có cơ chế tái sử dụng rõ ràng như React hoặc Vue.</li>
+                  <li>Việc bảo trì và phối hợp code có thể mất thời gian hơn khi giao diện có nhiều phần lặp lại.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="tech-card card reveal">
+              <div class="tech-card-header">
+                <span class="tech-icon tech-icon-outline">R</span>
+                <div>
+                  <p class="card-kicker">ĐÃ CÂN NHẮC</p>
+                  <h3>Vì sao không dùng React?</h3>
+                </div>
+              </div>
+              <p>React phù hợp với ứng dụng lớn, nhiều state và component. Với website portfolio nhỏ, framework này chưa thực sự cần thiết.</p>
+              <p class="decision-note">
+                <strong>Quyết định:</strong> dùng JavaScript thuần để không phải setup project hay build tool.
+              </p>
+            </article>
+
+            <article class="tech-card card reveal">
+              <div class="tech-card-header">
+                <span class="tech-icon tech-icon-outline">T</span>
+                <div>
+                  <p class="card-kicker">ĐÃ CÂN NHẮC</p>
+                  <h3>Tailwind CSS</h3>
+                </div>
+              </div>
+              <ul class="tech-reason-list">
+                <li>Có rất nhiều class, khiến HTML dài và rối vì một thẻ có thể mang cả chục class.</li>
+                <li>Khó nhìn code vì style nằm lẫn trong HTML.</li>
+                <li>Phức tạp hơn mức cần thiết, không phù hợp với portfolio nhỏ này.</li>
+              </ul>
+              <p class="decision-note"><strong>Quyết định:</strong> CSS thuần đủ đáp ứng yêu cầu và dễ chỉnh sửa hơn cho cả nhóm.</p>
+            </article>
+
+            <article class="tech-card card reveal">
+              <div class="tech-card-header">
+                <span class="tech-icon tech-icon-outline">B</span>
+                <div>
+                  <p class="card-kicker">ĐÃ CÂN NHẮC</p>
+                  <h3>Bootstrap</h3>
+                </div>
+              </div>
+              <ul class="tech-reason-list">
+                <li>File CSS/JS khá nặng so với nhu cầu của một portfolio nhỏ.</li>
+                <li>Khó ghi đè CSS nếu muốn tùy chỉnh giao diện theo phong cách riêng.</li>
+                <li>Phức tạp hơn vì phụ thuộc vào thư viện bên ngoài.</li>
+              </ul>
+              <p class="decision-note"><strong>Quyết định:</strong> CSS thuần giúp giao diện nhẹ, linh hoạt và không cần dependency.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section contact-section" id="contact">
+        <div class="container contact-layout">
+          <div class="reveal">
+            <p class="eyebrow">04 / GET IN TOUCH</p>
+            <h2>Let&apos;s build<br /><span>something useful.</span></h2>
+          </div>
+          <div class="contact-card card reveal">
+            <div>
+              <span>Email nhóm</span>
+              <strong>Not public</strong>
+            </div>
+            <div>
+              <span>GitHub / Repository</span>
+              <strong>Not public</strong>
+            </div>
+            <div>
+              <span>University</span>
+              <strong>University of Science, VNU-HCM (HCMUS)</strong>
+            </div>
+            <div>
+              <span>Faculty / Major</span>
+              <strong>Faculty of Information Technology / Software Engineering</strong>
+            </div>
+            <div class="contact-socials">
+              <span>Social links: Not public</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="#home"><span class="brand-mark">B</span><span>BLOCK<span class="brand-accent">KIDS</span></span></a>
+        <p>© <span id="current-year"></span> BLOXKIDS Team. Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </footer>
+
+    <!-- ===== MEMBER PROFILE MODAL ===== -->
+    <div class="profile-modal" id="profile-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profile-name">
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="profile-panel" role="document">
+        <button class="modal-close" type="button" aria-label="Đóng profile" data-close-modal>×</button>
+        <div id="profile-content"><!-- Profile is rendered from script.js --></div>
+      </article>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
