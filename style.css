@@ -143,10 +143,46 @@ button { font: inherit; }
 .button-secondary { color: var(--ink); background: var(--white); box-shadow: var(--shadow-small); }
 
 .hero-blocks { position: absolute; z-index: 1; right: max(5vw, calc((100vw - var(--container)) / 2)); bottom: 10%; width: 300px; height: 350px; }
-.block { position: absolute; display: block; border: 3px solid var(--ink); box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.35); object-fit: cover; }
-.block-red { top: 0; right: 0; width: 180px; height: 180px; animation: block-float-red 4.5s ease-in-out infinite; }
-.block-white { bottom: 0; left: 0; width: 155px; height: 155px; animation: block-float-white 5.2s ease-in-out infinite; }
-.block-dark { right: 38px; bottom: 47px; width: 125px; height: 125px; border-color: var(--white); animation: block-float-dark 4.8s ease-in-out infinite; }
+.hero-visual { position: absolute; display: block; overflow: hidden; border: 3px solid var(--ink); box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.35); }
+.visual-kicker { position: absolute; z-index: 1; color: var(--ink); font-size: 0.62rem; font-weight: 950; letter-spacing: 0.1em; line-height: 1; }
+
+.hero-visual-code {
+  top: 0; right: 0; width: 180px; height: 180px; background: var(--paper);
+  animation: hero-card-code-drift 5.4s ease-in-out infinite;
+}
+.hero-visual-code::before {
+  position: absolute; top: 16px; right: 18px; width: 9px; height: 9px; content: ""; background: var(--red);
+  box-shadow: 16px 0 0 var(--yellow), 32px 0 0 #4466d7;
+}
+.hero-visual-code .visual-kicker { top: 20px; left: 20px; }
+.code-line { position: absolute; left: 20px; display: block; height: 9px; transform-origin: left; animation: code-line-pulse 2.7s ease-in-out infinite; }
+.code-line-long { top: 64px; width: 120px; background: var(--red); }
+.code-line-medium { top: 87px; width: 92px; background: #4466d7; animation-delay: 0.22s; }
+.code-line-short { top: 110px; width: 64px; background: var(--yellow); animation-delay: 0.44s; }
+.code-cursor { position: absolute; bottom: 27px; left: 20px; display: block; width: 4px; height: 21px; background: var(--ink); animation: code-cursor-blink 1s steps(1, end) infinite; }
+
+.hero-visual-build {
+  bottom: 0; left: 0; width: 155px; height: 155px; background: var(--yellow);
+  animation: hero-card-build-drift 5.8s ease-in-out infinite;
+}
+.hero-visual-build::before { position: absolute; top: 0; right: 0; width: 35px; height: 35px; content: ""; background: var(--red); }
+.hero-visual-build .visual-kicker { top: 19px; left: 18px; }
+.build-window { position: absolute; right: 18px; bottom: 20px; left: 18px; display: grid; gap: 9px; }
+.build-bar { display: block; width: 100%; height: 8px; background: var(--ink); transform-origin: left; animation: build-bar-shift 2.3s ease-in-out infinite; }
+.build-bar-short { width: 67%; animation-delay: 0.28s; }
+.build-progress { position: relative; display: block; height: 12px; overflow: hidden; border: 2px solid var(--ink); }
+.build-progress::after { position: absolute; inset: 0; content: ""; background: var(--red); transform-origin: left; animation: build-progress-fill 2.9s ease-in-out infinite; }
+
+.hero-visual-orbit {
+  right: 38px; bottom: 47px; display: grid; width: 125px; height: 125px; place-items: center;
+  border-color: var(--white); color: var(--white); background: #4466d7; animation: hero-card-orbit-drift 5s ease-in-out infinite;
+}
+.hero-visual-orbit::after { position: absolute; bottom: 12px; left: 0; width: 100%; content: "SHIP"; color: var(--white); font-size: 0.56rem; font-weight: 950; letter-spacing: 0.16em; line-height: 1; text-align: center; }
+.orbit-ring { position: absolute; inset: 18px; display: block; border: 1px dashed rgba(255, 255, 255, 0.78); border-radius: 50%; animation: orbit-spin 5.2s linear infinite; }
+.orbit-ring::before, .orbit-ring::after { position: absolute; width: 9px; height: 9px; content: ""; border: 1px solid var(--ink); border-radius: 50%; }
+.orbit-ring::before { top: -5px; left: calc(50% - 5px); background: var(--red); }
+.orbit-ring::after { right: 1px; bottom: 5px; background: var(--yellow); }
+.orbit-core { position: relative; z-index: 1; display: grid; width: 42px; height: 42px; place-items: center; color: var(--ink); background: var(--yellow); font-size: 0.78rem; font-weight: 1000; letter-spacing: -0.06em; animation: orbit-core-pulse 2.1s ease-in-out infinite; }
 
 /* ===== ABOUT ===== */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 56px; align-items: center; }
@@ -283,19 +319,47 @@ button { font: inherit; }
   to { background-position: 42px 42px; }
 }
 
-@keyframes block-float-red {
-  0%, 100% { transform: rotate(7deg) translateY(0); }
-  50% { transform: rotate(11deg) translateY(-15px); }
+@keyframes hero-card-code-drift {
+  0%, 100% { transform: rotate(6deg) translate(0, 0); }
+  50% { transform: rotate(10deg) translate(-6px, -16px); }
 }
 
-@keyframes block-float-white {
-  0%, 100% { transform: rotate(-6deg) translateY(0); }
-  50% { transform: rotate(-10deg) translateY(13px); }
+@keyframes hero-card-build-drift {
+  0%, 100% { transform: rotate(-7deg) translate(0, 0); }
+  50% { transform: rotate(-11deg) translate(4px, 14px); }
 }
 
-@keyframes block-float-dark {
+@keyframes hero-card-orbit-drift {
   0%, 100% { transform: rotate(13deg) translate(0, 0); }
-  50% { transform: rotate(7deg) translate(-11px, -8px); }
+  50% { transform: rotate(7deg) translate(-12px, -8px); }
+}
+
+@keyframes code-line-pulse {
+  0%, 100% { transform: scaleX(0.76); }
+  50% { transform: scaleX(1); }
+}
+
+@keyframes code-cursor-blink {
+  50% { opacity: 0; }
+}
+
+@keyframes build-bar-shift {
+  0%, 100% { transform: scaleX(0.72); }
+  50% { transform: scaleX(1); }
+}
+
+@keyframes build-progress-fill {
+  0%, 100% { transform: scaleX(0.24); }
+  55% { transform: scaleX(0.88); }
+}
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-core-pulse {
+  0%, 100% { transform: scale(0.9); }
+  50% { transform: scale(1.08); }
 }
 
 /* ===== RESPONSIVE ===== */
