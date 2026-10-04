@@ -1,0 +1,11 @@
+# Caddyfile configuration for Web-Block1-Portfolio
+http://localhost:8080 {
+	# Set the root directory for serving files
+	root * .
+
+	# Enable static file server
+	file_server
+
+	# Compress responses with gzip and zstd for better performance
+	encode gzip zstd
+}
